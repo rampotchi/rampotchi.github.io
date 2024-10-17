@@ -9,37 +9,37 @@ app.use(express.static(__dirname));
 
 // ホームページのルート
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "home.html"));
+  res.sendFile(path.join(__dirname, "https://rampotchi.glitch.me/home.html"));
 });
 
 // aboutにアクセス
 app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, 'about.html'));
+  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/about.html'));
 });
 
 // accountにアクセス
 app.get('/account', (req, res) => {
-  res.sendFile(path.join(__dirname, 'account.html'));
+  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/account.html'));
 });
 
 // diaryにアクセス
 app.get('/diary', (req, res) => {
-  res.sendFile(path.join(__dirname, 'diary.html'));
+  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/diary.html'));
 });
 
 // homeにアクセス
 app.get('/home', (req, res) => {
-  res.sendFile(path.join(__dirname, 'home.html'));
+  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/home.html'));
 });
 
 // linkにアクセス
 app.get('/link', (req, res) => {
-  res.sendFile(path.join(__dirname, 'link.html'));
+  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/link.html'));
 });
 
 // diaryディレクトリのファイルを取得
 app.get('/diaries', (req, res) => {
-  const diaryDir = path.join(__dirname, 'diary');
+  const diaryDir = path.join(__dirname, 'https://rampotchi.glitch.me/diary');
   
   // diaryディレクトリ内のファイルを読み取る
   fs.readdir(diaryDir, (err, files) => {
@@ -90,5 +90,4 @@ app.use((req, res) => {
 });
 
 const listener = app.listen(process.env.PORT, () => {
-  console.log("Your app is listening on port " + listener.address().port);
 });
