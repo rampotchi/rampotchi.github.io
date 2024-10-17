@@ -12,31 +12,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "https://rampotchi.glitch.me/home.html"));
 });
 
-// aboutにアクセス
-app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/about.html'));
-});
-
-// accountにアクセス
-app.get('/account', (req, res) => {
-  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/account.html'));
-});
-
-// diaryにアクセス
-app.get('/diary', (req, res) => {
-  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/diary.html'));
-});
-
-// homeにアクセス
-app.get('/home', (req, res) => {
-  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/home.html'));
-});
-
-// linkにアクセス
-app.get('/link', (req, res) => {
-  res.sendFile(path.join(__dirname, 'https://rampotchi.glitch.me/link.html'));
-});
-
 // diaryディレクトリのファイルを取得
 app.get('/diaries', (req, res) => {
   const diaryDir = path.join(__dirname, 'https://rampotchi.glitch.me/diary');
