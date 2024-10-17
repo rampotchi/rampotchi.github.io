@@ -9,12 +9,12 @@ app.use(express.static(__dirname));
 
 // ホームページのルート
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "https://rampotchi.glitch.me/home.html"));
+  res.sendFile(path.join(__dirname, "home.html"));
 });
 
 // diaryディレクトリのファイルを取得
 app.get('/diaries', (req, res) => {
-  const diaryDir = path.join(__dirname, 'https://rampotchi.glitch.me/diary');
+  const diaryDir = path.join(__dirname, 'diary');
   
   // diaryディレクトリ内のファイルを読み取る
   fs.readdir(diaryDir, (err, files) => {
